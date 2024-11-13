@@ -1,0 +1,183 @@
+// Variables
+$primary-color: #9B009D
+$secondary-color: #4CAF50
+$text-color: #3C3C3C
+$background-color: rgba(245, 245, 220, 0.011)
+$footer-background: #333
+$footer-text-color: #fff
+$border-color: #222122
+$highlight-color: #9a009d5f
+$light-grey: #363636
+
+// Global Reset
+* 
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  font-family: 'Montserrat', sans-serif
+
+// Header & Top Bar
+.top-bar
+  background-color: $primary-color
+  display: flex
+  align-items: center
+  padding: 10px 20px
+  color: beige
+  justify-content: space-between
+
+  .top-logo
+    width: 30px
+    height: auto
+    margin-right: 15px
+
+.search-container
+  display: flex
+  align-items: center
+  gap: 10px
+  flex-grow: 1
+  justify-content: center
+
+  input
+    padding: 5px
+    border: none
+    border-radius: 3px
+
+  button
+    padding: 5px 10px
+    background-color: $secondary-color
+    color: rgba(255, 255, 255, 0.512)
+    border: none
+    border-radius: 3px
+    cursor: pointer
+
+// Navbar
+.navbar
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $background-color
+  border-bottom: 1px solid #00000052
+  padding: 0 20px
+
+  .logo
+    margin-right: auto
+    padding-left: 10px
+
+    img
+      width: 100px
+
+  .nav-links
+    display: flex
+    list-style: none
+    gap: 50px
+
+    li:last-child a
+      padding-right: 10px
+
+    li a
+      color: $text-color
+      text-decoration: none
+      font-weight: 500
+
+    li:nth-child(2) a::after
+      content: ''
+      display: block
+      width: 100%
+      height: 2px
+      background-color: $border-color
+      margin-top: 5px
+
+// Main Content
+main
+  width: 90%
+  margin: auto
+  padding: 20px 0
+  position: relative
+
+  p
+    margin: 10px 0
+    padding: 0 20px
+    text-align: justify
+
+  h1
+    font-size: 2.5em
+    color: #333
+    text-align: center
+    font-weight: normal
+
+    &::after
+      content: ''
+      display: block
+      width: 60px
+      height: 2px
+      background-color: $highlight-color
+      margin: 10px auto 0
+      margin-bottom: 20px
+
+  h2
+    font-weight: normal
+
+  ul
+    list-style-type: disc
+    margin-left: 20px
+    padding-left: 20px
+    margin-bottom: 20px
+
+    li
+      margin-bottom: 10px
+
+    li::marker
+      color: $primary-color
+
+// Footer
+footer
+  background-color: $footer-background
+  color: $footer-text-color
+  padding: 20px
+  text-align: center
+  border: 3px solid $light-grey
+  position: relative
+  margin-bottom: 0
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+
+  .footer-content
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: space-between
+    padding: 20px
+
+  .footer-logo
+    padding: 30px
+
+    img
+      width: auto
+      height: auto
+      margin-bottom: 20px
+
+  .social-icons
+    display: flex
+    gap: 15px
+    justify-content: center
+
+    a
+      display: flex
+      align-items: center
+      color: $footer-text-color
+      text-decoration: none
+
+  .social-icon
+    width: 30px
+    height: 30px
+    display: inline-block
+    margin-right: 5px
+
+  .copy
+    color: #ededed67
+    font-size: 11px
+    margin-top: auto
+    padding-bottom: 0
